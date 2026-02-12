@@ -19,7 +19,7 @@ int main(){
                 printf("Position already taken!\n");
                 continue;
             }
-            printf("%c played", turn);
+            printf("\n%c played\n", turn);
             displayBoard(board);
             if(checkWin(board)==1){
                 break;  
@@ -83,12 +83,12 @@ int checkDraw(char board[]) {
     int i;
 
     for (i = 0; i < 9; i++) {
-        // If any position is NOT X or O, game is not a draw
+        
         if (board[i] != 'X' && board[i] != 'O') {
-            return 0;   // not a draw
+            return 0; 
         }
     }
 
-    // All positions are filled with X or O
-    return 1;           // draw
+    
+    return 1; 
 }
